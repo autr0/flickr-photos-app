@@ -28,17 +28,6 @@ android {
         val properties = Properties()
         properties.load(project.rootProject.file("local.properties").inputStream())
         buildConfigField("String", "API_KEY", properties.getProperty("API_KEY"))
-//        // Configure buildConfig fields from local.properties
-//        val localPropertiesFile = project.rootProject.file("local.properties")
-//        val localProperties = Properties()
-//
-//        if (localPropertiesFile.exists()) {
-//            localProperties.load(FileInputStream(localPropertiesFile))
-//        }
-//
-//        // Define the BuildConfig field for the API key, if it exists
-//        val apiKey = localProperties.getProperty("API_KEY") ?: ""
-//        buildConfigField("String", "API_KEY", "\"$apiKey\"")
     }
 
     buildTypes {

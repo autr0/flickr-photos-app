@@ -175,8 +175,7 @@ fun PictureCard(
     Card(
         modifier = Modifier
             .size(200.dp)
-            .padding(2.dp)
-            .clickable { navigateToDetail(url, title) },
+            .padding(2.dp),
         shape = RoundedCornerShape(15.dp)
     ) {
         AsyncImage(
@@ -188,6 +187,7 @@ fun PictureCard(
             modifier = Modifier
                 .padding(2.dp)
                 .fillMaxSize()
+                .clickable { navigateToDetail(url, title) }
         )
     }
 }
